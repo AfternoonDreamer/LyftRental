@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
+from serviceable import ServiceInterface
 
+class Car(ServiceInterface):
+    def __init__(self, engineer, battery):
+        self.engineer = engineer
+        self.battery = battery
 
-class Car(ABC):
-    def __init__(self, last_service_date):
-        self.last_service_date = last_service_date
-
-    @abstractmethod
     def needs_service(self):
-        pass
+        return self.engineer.needs_service() and self.battery.needs_service()
