@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 from serviceable import ServiceInterface
 
 class Car(ServiceInterface):
@@ -7,4 +7,4 @@ class Car(ServiceInterface):
         self.battery = battery
 
     def needs_service(self):
-        return self.engineer.needs_service() and self.battery.needs_service()
+        return self.engineer.needs_service() or self.battery.needs_service()

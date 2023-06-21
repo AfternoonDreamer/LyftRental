@@ -1,5 +1,4 @@
 from battery.battery import BatteryInterface;
-from datetime import datetime
 
 class SpindlerBattery(BatteryInterface):
     def __init__(self, current_date, last_service_date):
